@@ -1,18 +1,15 @@
-.App {
+/* .App {
   text-align: center;
 }
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
-
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -23,11 +20,9 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
 .App-link {
   color: #61dafb;
 }
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +30,188 @@
   to {
     transform: rotate(360deg);
   }
+} */
+body{
+  background-color: black;
+}
+.App {
+  font-family: sans-serif;
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(15rem,1fr));
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+  padding: 2rem;
+  background: rgb(0, 0, 0);
+} 
+.head{
+  color: yellow;
+  font-size: 1.5rem;
+  font-family: 'Fuzzy Bubbles', cursive;
+  text-shadow: 1px 1px 10px red;
+}
+
+@media only screen and (min-width: 610px){
+  .head{
+    transform: rotate(-90deg);
+    transform-origin: left;
+    margin:2rem 0rem -15rem 18rem;
+  }
+}
+
+.head:hover{
+  color:red;
+  text-shadow: 1px 1px 5px yellow;
+}
+.Movies{
+  border: 2px solid black;
+  box-shadow: 0px 0px 5px 1px white;
+  border-radius: 15px;
+  overflow: hidden;
+  background: rgb(149, 1, 1);
+}
+.Movies:hover{
+        transform: scale(1.1);
+        transition: all 0.3s ease-in-out;
+        box-shadow: 1px 1px 5px 2px red;
+}
+.Text{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: whitesmoke;
+  font-family: 'Righteous', cursive;
+}
+
+.buttons{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin:5px;
+  color: whitesmoke;
+  font-family: 'Righteous', cursive;
+}
+
+.summary{
+  padding-left: 6px;
+  color:#fdec00;
+}
+b{
+  color: whitesmoke;
+}
+.rating{
+  font-size: 1.2rem;
+  padding-left:2rem;
+}
+span{
+  border: 2px solid black;
+  border-radius: 4px;
+}
+
+img{
+  width:100%;
+  height:12rem;
+  object-fit: cover;
+}
+img:hover{
+  transform: scale(1.15);
+  transition: 0.5s ease-in-out;
+}
+.toggle{
+  background:transparent;
+  border: none;
+  font-size: 1rem;
+  color:white;
+}
+.toggle:hover{
+  transform: scale(1.15);
+  transition: 0.2s ease-in-out;
+}
+.delete{
+  border:none;
+  background: transparent;
+  font-size:1.5rem;
+}
+.delete:hover{
+  transform: scale(1.15);
+  transition: 0.2s ease-in-out;
+}
+.Likes{
+  margin: 1rem;
+  display:flex;
+  justify-content:flex-end;
+}
+.Likes>button{
+  border:none;
+  background: transparent;
+  font-size:1.5rem;
+}
+.Likes>button:hover{
+  transform: scale(1.15);
+  transition: 0.2s ease-in-out;
+}
+.Add{
+  display:grid;
+  place-items: center;
+}
+.Add>button{
+  border:2px solid white;
+  background: transparent;
+  border-radius: 5px;
+  width:6rem;
+  font-size: 5rem;
+  color:white;
+}
+.Add>button:hover{
+  transform: scale(1.15);
+  transition: 0.3s ease-in-out;
+}
+.addMovieList{
+  background:white;
+  display:grid;
+  gap:1rem;
+  padding:1rem;
+  border-radius:15px;
+  
+}
+.addMovieList:hover{
+  transform: scale(1.15);
+  transition: 0.3s ease-in-out;
+}
+.addDetails{
+  display:grid;
+  grid-template-columns:1fr 2fr 0.5fr;
+  align-items:center;
+  justify-items: stretch;
+  height: 50px;
+  font-size:1.5rem;
+}
+.addDetails>button:hover,input:hover{
+  transform: scale(1.15);
+  transition: 0.3s ease-in-out;
+}
+.buttons >.cancel{
+    background:red;
+    color:white;
+    border:none;
+    border-radius:5px;
+    font-size:1rem;
+    padding:5px;
+}
+.buttons >.cancel:hover{
+  transform: scale(1.15);
+  transition: 0.3s ease-in-out;
+}
+.buttons>.addToList{
+  background:green;
+  color:white;
+  border:none;
+  border-radius:5px;
+  font-size:1rem;
+  padding:5px;
+}
+.buttons>.addToList:hover{
+  transform: scale(1.15);
+  transition: 0.3s ease-in-out;
 }
